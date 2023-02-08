@@ -1,64 +1,19 @@
 .header{
 background-color:#230C2E ;
 position:sticky; top:0;
+
 }
 
+.img-go{
+  max-width: 15%;
+}
 
 .button{
-  min-width: 12rem;
-  border: none;
-  background: none;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  font-weight: 500;
-  padding: 0.6rem 1rem;
-  margin: 2rem;
-  border: 4px solid;
-  position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: center;
 }
 
-.button:before{
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-/* Efecto Fill */
-
-.button--fill {
-  color: #FF78AA;
-  border-color: #FF78AA;
-  transition: color 0.3s ease-in-out;
-}
-
-.button--fill:hover{
-  color: #fff;
-}
-
-.button--fill:before{
-  height: 0;
-  left: 50%;
-  top: 50%;
-  width: 0;
-  background: #FF78AA;
-  transition: width, height, top, left, 0.3s ease-in-out;
-}
-
-.button--fill:hover:before{
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-
-/* Diagonal */
-
-.button--diagonal{
-  color: #B564DB;
-  border-color: #B564DB;
-  overflow: hidden;
-  transition: color 0.3s ease-in-out;
-}
 #bloqueTarjetas {
   display: flex;
   padding: 20px 30px;
@@ -91,5 +46,5 @@ position:sticky; top:0;
 }
 
 .imagenPokemon {
-  width: 50%;
+  width: 60%;
 }
