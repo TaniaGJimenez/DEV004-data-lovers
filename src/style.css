@@ -1,0 +1,50 @@
+.header{
+background-color:#230C2E ;
+position:sticky; top:0;
+
+}
+
+.img-go{
+  max-width: 15%;
+}
+
+.button{
+    position: relative;
+    display: flex;
+    flex-direction: center;
+}
+
+#bloqueTarjetas {
+  display: flex;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+  gap: 5%;
+  background-color: #5c76be;
+}
+.tarjeta {
+  border-radius: 20px;
+  width: 16%;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  height: 40vh;
+  background-color: hsl(54, 100%, 57%);
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+}
+/* para despositivos moviles  */
+@media (max-width: 700px){
+  #bloqueTarjetas {
+      gap: 20%;
+
+  }
+  .tarjeta {
+      width: 40%;
+
+  }
+}
+
+.imagenPokemon {
+  width: 60%;
+}
