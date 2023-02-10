@@ -26,12 +26,21 @@ position:sticky; top:0;
   width: 16%;
   gap: 15px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   height: 40vh;
-  background-color: hsl(54, 100%, 57%);
+  background-color:#EFBDEB;
   display: flex;
   flex-direction: column ;
-  justify-content: center;
+  padding-bottom: 50px;
+ 
+}
+p{
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 25px;
+    color: #230C2E;
+
+
 }
 /* para despositivos moviles  */
 @media (max-width: 700px){
@@ -46,5 +55,11 @@ position:sticky; top:0;
 }
 
 .imagenPokemon {
-  width: 60%;
+  width: 90%;
+  /* /margin-left: auto;
+  margin-right: auto; */
+  /* margin: auto; */
+  margin-top: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
 }
