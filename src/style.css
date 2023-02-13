@@ -1,7 +1,6 @@
 .header{
 background-color:#230C2E ;
 position:sticky; top:0;
-
 }
 
 .img-go{
@@ -12,6 +11,7 @@ position:sticky; top:0;
     position: relative;
     display: flex;
     flex-direction: center;
+    justify-content: center;
 }
 
 #btn {
@@ -79,4 +79,27 @@ p{
   margin-top: 10px;
   justify-content: center;
   margin-bottom: 10px;
+}
+
+.menu-tipos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+
+.menu-tipos ul {
+  list-style: none;
+  width: 5%;
+  text-align: center;
+  margin: 5px;
+}
+
+a:link {
+  color: orange;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: hotpink;
 }
