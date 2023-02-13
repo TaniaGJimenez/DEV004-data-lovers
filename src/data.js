@@ -20,6 +20,11 @@ export const tarjetas = (data) => {
   }
   return tarjetaString;
 };
+export const filtrarTipos = (data, tipo) => {
+  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.type.includes(tipo))
+  console.log(dataFiltrada);
+  return { pokemon: dataFiltrada }
+}
 
 export const filtrarTipos = (data, tipo) => {
 const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.type.includes(tipo))
