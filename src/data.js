@@ -13,7 +13,7 @@ export const tarjetas = (data) => {
     tarjetaString += `
       <section class="tarjeta">
         <img class="imagenPokemon" src=${pokemon.img} >
-        <p>#${pokemon.num}<br>${pokemon.name}<\p> 
+        <h1> #${pokemon.num}.${pokemon.name} <br> Tipo: ${pokemon.type}<h1>
       </section>
     `
   }
