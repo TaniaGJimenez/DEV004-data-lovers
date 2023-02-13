@@ -1,3 +1,4 @@
+//import data from './data/pokemon/pokemon.js'
 // estas funciones son de ejemplo
 
 export const Imagenes = () => {
@@ -13,9 +14,17 @@ export const tarjetas = (data) => {
     tarjetaString += `
       <section class="tarjeta">
         <img class="imagenPokemon" src=${pokemon.img} >
-        <h1> #${pokemon.num}.${pokemon.name} <br> Tipo: ${pokemon.type}<h1>
+        <p>#${pokemon.num}<br>${pokemon.name}</p> 
       </section>
     `
   }
   return tarjetaString;
 };
+
+export const filtrarTipos = (data, tipo) => {
+const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.type.includes(tipo))
+console.log(dataFiltrada);
+return { pokemon: dataFiltrada }
+}
+
+//export const fireTypePokemons = data.pokemon.filter((pokemon) => {return pokemon.type === 'fire'})
