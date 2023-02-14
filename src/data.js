@@ -1,26 +1,28 @@
 // estas funciones son de ejemplo
 
 export const Imagenes = () => {
-  return 'Imagenes';
+  return "Imagenes";
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+  return "OMG";
 };
 export const tarjetas = (data) => {
-  let tarjetaString = ""
+  let tarjetaString = "";
   for (const pokemon of data.pokemon) {
     tarjetaString += `
       <section class="tarjeta">
         <img class="imagenPokemon" src=${pokemon.img} >
-        <p>#${pokemon.num}<br>${pokemon.name}</p> 
+        <p>#${pokemon.num}<br>${pokemon.name}<\p> 
       </section>
-    `
+    `;
   }
   return tarjetaString;
 };
 export const filtrarTipos = (data, tipo) => {
-  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.type.includes(tipo))
+  const dataFiltrada = data.pokemon.filter((pokemon) =>
+    pokemon.type.includes(tipo)
+  );
   console.log(dataFiltrada);
-  return { pokemon: dataFiltrada }
-}
+  return { pokemon: dataFiltrada };
+};
