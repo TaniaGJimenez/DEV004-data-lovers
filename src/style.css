@@ -1,13 +1,26 @@
 .header{
   background-color:#230C2E ;
   position:sticky; top:0;
+  padding-bottom:25px;
+ 
   }
   
   .img-go{
-    max-width: 15%;
+    max-width: 250px;
   }
   
-  .button{
+  @media (max-width: 800px){
+    .img-go {
+        width: 100%;
+  
+    }
+  }
+
+body{
+  background: #EFBDEB;
+  font-family: Consolas;
+}  
+ /* .button{
       position: relative;
       display: flex;
       flex-direction: center;
@@ -23,13 +36,13 @@
       font-size: 20px;
       cursor: pointer;
        
-    }
+    }*/
   #bloqueTarjetas {
     display: flex;
     padding: 20px 30px;
     flex-wrap: wrap;
     gap: 5%;
-    background: #EFBDEB;
+    
   }
   .tarjeta {
     border-width: 10px;
@@ -60,7 +73,7 @@
   
   }
   /* para despositivos moviles  */
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     #bloqueTarjetas {
         gap: 20%;
   
@@ -81,19 +94,22 @@
     margin-bottom: 10px;
   }
   .dropbtn {
-    background-color: #4CAF50;
+    background-color: #0075BE;
     color: white;
     padding: 16px;
-    font-size: 16px;
-    border: none;
+    font-size: 12px;
+    margin: 10px;
     cursor: pointer;
+    border-radius:10px;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline;
+    max-width:100px;
 }
+
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -104,48 +120,47 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* Links inside the dropdown */
+/* Links inside the dropdown -- RESOLVER AQUI*/
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    margin:5px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color:#FFCC00}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: inline;
+    border-radius:15px;
+    background-color:#203079;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #FFCC00;
+    color:black;
 }
 
 
-  .menu-tipos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    
+ .menu-tipos{
+    list-style:none;
   }
   
-  .menu-tipos ul {
+/*  .menu-tipos ul {
     list-style: none;
     width: 5%;
     text-align: center;
-    margin: 5px;
+
   }
-  
-  a:link {
-    color: orange;
-  }
+*/  
   a:visited {
-    color: green;
+    color:white;
   }
   a:hover {
-    color: hotpink;
+    color:black;
   }  
