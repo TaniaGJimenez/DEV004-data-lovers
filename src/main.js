@@ -1,7 +1,6 @@
 import { Imagenes,tarjetas,filtrarTipos} from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+
 const pokemonDB = data.pokemon
 
 // demostracion de datos de pokemon.js a main.js
@@ -15,7 +14,8 @@ const bloqueTarjetas = document.getElementById("bloqueTarjetas");
 bloqueTarjetas.innerHTML = tarjetas(data)
 const tipos=document.querySelector(".tipos");
 const tipoPokemon=document.getElementsByClassName("tipoPokemon")
-const menuTipos=document.querySelector("menu-tipos")
+const menuTipos=document.querySelector(".menu-tipos")
+
 /*btn.addEventListener("click", function() {
   // Mostrar o ocultar el contenedor de datos
   dataContainer.style.display = (dataContainer.style.display === "none") ? "block" : "none";
@@ -31,13 +31,11 @@ for (const tipo of tipoPokemon) {
     //el console seria sustituido por el llamado a funcion que realice el filtrado his1
     console.log(data.pokemon)
     console.log(tipo.name.toString())
-    menuTipos.style.display = 'none'
+    // menuTipos.style.display = 'none'
     const pokemonesTipo = filtrarTipos(data, tipo.name)
-    bloqueTarjetas.innerHTML = tipos(pokemonesTipo)
+    bloqueTarjetas.innerHTML = tarjetas(pokemonesTipo)
   })
 }
-
-
 
 
 
