@@ -1,0 +1,175 @@
+.header{
+  background-color:#230C2E ;
+  position:sticky; top:0;
+  padding-bottom:25px;
+  background:url(Im-go.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100;
+  height: 100;
+ 
+  }
+  
+  .img-go{
+    max-width: 250px;
+  }
+  
+  @media (max-width: 800px){
+    .img-go {
+        width: 100%;
+  
+    }
+  }
+
+body{
+  background: #f1ee3d;
+  font-family: Consolas;
+}  
+ /* .button{
+      position: relative;
+      display: flex;
+      flex-direction: center;
+      justify-content: center;
+  }
+  
+  #btn {
+      width: 2.5cm;
+      height: 1.5cm;
+      border-radius: 10px;
+      background-color: lightblue;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+      font-size: 20px;
+      cursor: pointer;
+       
+    }*/
+  #bloqueTarjetas {
+    display: flex;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    gap: 5%;
+    
+  }
+  .tarjeta {
+    border-width: 10px;
+    border:6px   double
+    #230C2E;
+    margin: 30px 20px;
+    border-radius: 20px;
+    width: 16%;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 40vh;
+    background:url(fondo.jpg);
+    display: flex;
+    flex-direction: column ;
+    padding-bottom: 50px;
+    
+   
+    
+   
+  }
+  p{
+      margin-bottom: 5px;
+      text-align: center;
+      font-size: 25px;
+      color: #230C2E;
+  
+  
+  }
+  /* para despositivos moviles  */
+  @media (max-width: 800px){
+    #bloqueTarjetas {
+        gap: 20%;
+  
+    }
+    .tarjeta {
+        width: 50%;
+  
+    }
+  }
+  
+  .imagenPokemon {
+    width: 90%;
+    /* /margin-left: auto;
+    margin-right: auto; */
+    /* margin: auto; */
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .dropbtn {
+    background-color: #0075BE;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* box-shadow: 10px 5px 5px black; */
+
+    /* border:6px   solid
+    #0a8a1bd5 */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline;
+    max-width:100px;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown -- RESOLVER AQUI*/
+.dropdown-content a {
+    margin:5px;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:#FFCC00}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: inline;
+    border-radius:15px;
+    background-color:#203079;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #FFCC00;
+    color:black;
+}
+
+
+ .menu-tipos{
+    list-style:none;
+  }
+  
+/*  .menu-tipos ul {
+    list-style: none;
+    width: 5%;
+    text-align: center;
+
+  }
+*/  
+  a:visited {
+    color:white;
+  }
+  a:hover {
+    color:black;
+  }  
