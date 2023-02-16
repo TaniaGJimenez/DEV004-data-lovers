@@ -1,4 +1,4 @@
-import { Imagenes,tarjetas,filtrarTipos} from './data.js';
+import { Imagenes,tarjetas,filtrarTipos,buscarPorNombre} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemonDB = data.pokemon
@@ -15,7 +15,7 @@ bloqueTarjetas.innerHTML = tarjetas(data)
 const tipos=document.querySelector(".tipos");
 const tipoPokemon=document.getElementsByClassName("tipoPokemon")
 const menuTipos=document.querySelector(".menu-tipos")
-
+const inputBuscar = document.getElementById("inputBuscar")
 /*btn.addEventListener("click", function() {
   // Mostrar o ocultar el contenedor de datos
   dataContainer.style.display = (dataContainer.style.display === "none") ? "block" : "none";
@@ -37,5 +37,9 @@ for (const tipo of tipoPokemon) {
   })
 }
 
-
+inputBuscar.addEventListener('input', () => {
+  console.log(inputBuscar.value)
+  const FiltroNombre = buscarPorNombre(data, inputBuscar.value)
+  bloqueTarjetas.innerHTML = tarjetas(FiltroNombre)
+});
 
