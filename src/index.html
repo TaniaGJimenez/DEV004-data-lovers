@@ -10,11 +10,12 @@
   </head>
 <header class="header">
  
-  <center>
-  <img class="img-go"src="go.png"> </img></center>
+  
+  <img class="img-go" src="go.png">
   
   <!--<button id="btn">TIPOS</button>
   <div id="dataContainer" style="display: none;"></div>-->
+  <div class="botones">
   <div class="dropdown">
    <botton class="dropbtn">FILTRAR POR TIPO</botton>
   <div class="dropdown-content">
@@ -22,7 +23,7 @@
    <div>  
      <li ><a href="#" name="water" class="tipoPokemon">Agua</a></li>
      <li ><a href="#" name="fire" class="tipoPokemon">Fuego</a></li>
-     <li><a href="#" name="grass" class="tipoPokemon">Planta</a></li>
+     <!-- <li><a href="#" name="grass" class="tipoPokemon">Planta</a></li> -->
      <li><a href="#" name="ground" class="tipoPokemon">Tierra</a></li>
      <li><a href="#" name="rock" class="tipoPokemon">Roca</a></li>
      <li><a href="#" name="steel" class="tipoPokemon">Metal</a></li>
@@ -42,25 +43,23 @@
      <li><a href="#" name="fairy" class="tipoPokemon">Hada</a></li>
      </div>
   </ul>
-</div>
+  </div>
+  </div>
+  <div class="buscar">
+  <input type="text" id="inputBuscar" placeholder="Buscar por nombre">
+  <!-- <img src="b1 .png" alt=""> -->
+ </div>
 </div>
 
-<div class="buscar">
-  <div style="display: flex; justify-content: flex-end;">
-   <input type="text" style="margin-left: auto;"name=""id="inputBuscar" placeholder="Buscar por nombre">
-   <img src="b2 .png" alt="">
-  </div>
 </header>
 <body>
 <main>
    
- <div class= "bloqueTarjetas"id="bloqueTarjetas"></div>
- <div class= "tipos"id="tipos">
-  </div>
-  </main>  
+  <div class= "bloqueTarjetas" id="bloqueTarjetas"></div>
+   
   
   </main>
   <div id="root"></div>
-    <script src="main.js" type="module"></script>
+  <script src="main.js" type="module"></script>
   </body>
 </html>
