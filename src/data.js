@@ -13,7 +13,7 @@ export const tarjetas = (data) => {
     tarjetaString += `
       <section class="tarjeta">
         <img class="imagenPokemon" src=${pokemon.img} >
-        <p>#${pokemon.num}<br>${pokemon.name}<\p> 
+        <p>#${pokemon.num}<br>${pokemon.name.toUpperCase()}<\p> 
       </section>
     `;
   }
@@ -25,4 +25,9 @@ export const filtrarTipos = (data, tipo) => {
   );
   console.log(dataFiltrada);
   return { pokemon: dataFiltrada };
+};
+
+export const buscarPorNombre = (data, nombreBuscar) => {
+  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.name.startsWith(nombreBuscar))
+  return { pokemon: dataFiltrada }
 };

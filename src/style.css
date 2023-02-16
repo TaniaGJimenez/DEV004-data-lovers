@@ -86,7 +86,25 @@ body{
         width: 50%;
   
     }
+    .dropbtn {
+      background-color: #0075BE;
+      color: white;
+      padding: 16px;
+      font-size: 10%
+    }
+    .buscar input {
+      width: 10%;
+      display: inline;
+      font-size: 5%;
+     
+      border-radius: 15px;
+      text-align: right;
+     justify-content: flex-end;
+     position: relative;
+    }
+  
   }
+
   
   .imagenPokemon {
     width: 90%;
@@ -110,6 +128,16 @@ body{
 
     /* border:6px   solid
     #0a8a1bd5 */
+}
+.buscar input {
+  width: 20%;
+  display: inline;
+  font-size: 20px;
+  padding: 2px;
+  border-radius: 15px;
+  text-align: right;
+ justify-content: flex-end;
+ position: relative;
 }
 
 /* The container <div> - needed to position the dropdown content */
