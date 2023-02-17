@@ -28,7 +28,7 @@ export const filtrarTipos = (data, tipo) => {
 };
 
 export const buscarPorNombre = (data, nombreBuscar) => {
-  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.name===(nombreBuscar))
+  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.name.startsWith(nombreBuscar))
   return { pokemon: dataFiltrada }
 };
 // export const buscarPorNombre1 = (data, tipo) => {

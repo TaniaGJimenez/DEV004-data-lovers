@@ -6,41 +6,20 @@
   background-size: cover;
   width: 100;
   height: 100;
+  justify-content: space-between;
  
   }
   
   .img-go{
     max-width: 250px;
+    display: block;
+    margin: 0 auto;
   }
-  
-  @media (max-width: 800px){
-    .img-go {
-        width: 100%;
-  
-    }
-  }
-
 body{
   background: #f1ee3d;
   font-family: Consolas;
 }  
- /* .button{
-      position: relative;
-      display: flex;
-      flex-direction: center;
-      justify-content: center;
-  }
-  
-  #btn {
-      width: 2.5cm;
-      height: 1.5cm;
-      border-radius: 10px;
-      background-color: lightblue;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
-      font-size: 20px;
-      cursor: pointer;
-       
-    }*/
+
   #bloqueTarjetas {
     display: flex;
     padding: 20px 30px;
@@ -71,39 +50,10 @@ body{
   p{
       margin-bottom: 5px;
       text-align: center;
-      font-size: 25px;
+      font-size: 20px;
       color: #230C2E;
-  
-  
-  }
-  /* para despositivos moviles  */
-  @media (max-width: 800px){
-    #bloqueTarjetas {
-        gap: 20%;
-  
-    }
-    .tarjeta {
-        width: 50%;
-  
-    }
-    .dropbtn {
-      background-color: #0075BE;
-      color: white;
-      padding: 16px;
-      font-size: 10%
-    }
-    .buscar input{
-      width: 10%;
-      display: flex;
-      font-size: 5%;
-      border-radius: 15px;
-      text-align: right;
-     justify-content: flex-end;
-     position: relative;
     }
   
-  }
-
   
   .imagenPokemon {
     width: 90%;
@@ -123,28 +73,14 @@ body{
     cursor: pointer;
     border-radius:10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    /* box-shadow: 10px 5px 5px black; */
-
-    /* border:6px   solid
-    #0a8a1bd5 */
-}
-.buscar input {
-  width: 20%;
-  display: flex;
-  font-size: 20px;
-  padding: 2px;
-  border-radius: 15px;
-  text-align: right;
- justify-content: flex-end;
- position: relative;
- margin: 10px;
+   
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline;
-    max-width:100px;
+   
 }
 
 
@@ -154,7 +90,8 @@ body{
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
 }
 
 /* Links inside the dropdown -- RESOLVER AQUI*/
@@ -168,13 +105,18 @@ body{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color:#FFCC00}
+.dropdown-content a:hover {background-color:#FFCC00
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: inline;
-    border-radius:15px;
-    background-color:#203079;
+  display: block;
+  position: absolute;
+  top: 100%;
+  border-radius: 15px;
+  background-color: #203079;
+  /* column-count: 2; */
+
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -201,7 +143,82 @@ body{
   a:hover {
     color:black;
   }  
-  #botones{
+ .botones{
    display: flex;
-   flex-direction: row;
+   
+   align-items: center;
+   justify-content: space-between;
+   }
+  
+   .buscar input{
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    padding: 2px;
+    border-radius: 15px;
+    text-align: right;
+   justify-content: flex-end;
+   position: relative;
+   margin: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* para despositivos moviles  */
+  @media (max-width: 800px){
+    #bloqueTarjetas {
+        gap: 20%;
+  
+    }
+    .tarjeta {
+        width: 50%;
+  
+    }
+    .dropbtn {
+      background-color: #0075BE;
+      color: white;
+      padding: 16px;
+      font-size: 10%
+    }
+    .buscar input{
+      width: 10%;
+      display: flex;
+      font-size: 5%;
+      border-radius: 15px;
+      text-align: right;
+     justify-content: flex-end;
+     position: relative;
+    }
+  
+  }
+  @media (max-width: 800px){
+    .img-go {
+        width: 100%;
+  
+    }
   }
