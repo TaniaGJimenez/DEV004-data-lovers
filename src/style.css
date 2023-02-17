@@ -252,7 +252,26 @@ a:visited {
      justify-content: flex-end;
      position: relative;
     }
- 
+    .botones {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-size: 70%;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1fd31f;
+      min-width: 160px;
+      /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+     
+  }
   }  
 @media (max-width: 800px){
     .img-go {

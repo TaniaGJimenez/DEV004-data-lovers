@@ -1,4 +1,4 @@
-import {tarjetas,filtrarTipos,buscarPorNombre } from '../src/data.js';
+import {tarjetas,filtrarTipos,buscarPorNombre,OrdenarPorNombre,OrdenarPorNombreAZ} from '../src/data.js';
 
 const data =
 {
@@ -97,6 +97,7 @@ describe('buscarPorNombre', () => {
     expect({ pokemon: resultadoObtenido }).toStrictEqual(resultadoEsperado);
   })
 });
+
 //   it('returns `example`', () => {
 //     expect(example()).toBe('example');
 //   });
@@ -112,3 +113,14 @@ describe('buscarPorNombre', () => {
 //     expect(anotherExample()).toBe('OMG');
 //   });
 // });
+describe('OrdenarPorNombre', () => {
+  it('is a function', () => {
+    expect(typeof OrdenarPorNombre).toStrictEqual('function');
+  })
+});
+describe('OrdenarPorNombreAZ', () => {
+  it('is a function', () => {
+    expect(typeof OrdenarPorNombreAZ).toBe('function');
+  })
+});
+      
