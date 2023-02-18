@@ -35,3 +35,70 @@ export const buscarPorNombre = (data, nombreBuscar) => {
 //   const dataFiltrada = data.pokemon.search((pokemon) =>  pokemon.name.includes(nombreBuscar))
 //   return { pokemon: dataFiltrada }
 // };
+
+// export const ordenarAlfabeticamenteAscendente = (data) => {
+//   const dataOrdenada = data.pokemon.sort((a, b) => { // a y b son dos parametros que se comparan
+//     const A = a.name.toUpperCase(); // convierte los string a mayusculas para que se ordene alfabeticamente
+//     const B = b.name.toUpperCase(); 
+//     if (A < B) { //a se ordena antes que b
+//       return -1;
+//     }
+//     if (A > B) { //b se ordena antes que a
+//       return 1;
+//     }
+
+//     // no hay cambios
+//     return 0;
+//   });
+
+//   return { pokemon: dataOrdenada }
+// }
+
+// //ordenado de la Z-A
+// export const ordenarAlfabeticamenteDescendente = (data) => {
+//   const dataOrdenada = data.pokemon.sort((a, b) => {
+//     const A = a.name.toUpperCase();
+//     const B = b.name.toUpperCase(); 
+//     if (A < B) {
+//       return 1;
+//     }
+//     if (A > B) {
+//       return -1;
+//     }
+
+//     return 0;
+//   });
+
+//   return { pokemon: dataOrdenada }
+// }
+export const OrdenarPorNombre = (data) => {
+  const SortData = data.pokemon.sort((a, b) =>
+  { const nameA = a.name;
+    const nameB = b.name;
+    if (nameA < nameB) {
+      return 1;
+    }
+    
+    if (nameA > nameB) {
+      return -1;
+    }
+    return 0;
+  });
+  return{pokemon:SortData} 
+ 
+};
+export const OrdenarPorNombreAZ = (data) => {
+  const SortData = data.pokemon.sort((a, b) =>
+  { const nameA = a.name;
+    const nameB = b.name;
+    if (nameA > nameB) {
+      return 1;
+    }
+    if (nameA < nameB) {
+      return -1;
+    }
+    return 0;
+  });
+  return{pokemon:SortData} 
+ 
+};
