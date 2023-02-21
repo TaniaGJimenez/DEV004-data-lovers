@@ -1,8 +1,16 @@
-import {tarjetas,filtrarTipos,buscarPorNombre,OrdenarPorNombre,OrdenarPorNombreAZ} from './data.js';
+import {tarjetas,filtrarTipos,buscarPorNombre,abcOrder} from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 
-//const pokemonDB = data.pokemon
+const todos = {
+  pokemon: [
+    ...data.pokemon
+  ]
 
+}
+
+//const pokemonDB = data.pokemon
+//OrdenarPorNombre,OrdenarPorNombreAZ,
 // demostracion de datos de pokemon.js a main.js
 // console.log("pokemonDB =")
 // console.log(pokemonDB)
@@ -39,15 +47,28 @@ inputBuscar.addEventListener('input', () => {
 
 for (const item of Ordenar) {
   item.addEventListener("click", () => {
-    
+    if (item.name === "todos") {
+      bloqueTarjetas.innerHTML = tarjetas(todos);
+    }
     
     if (item.name === "AZ") {
-      const SortData = OrdenarPorNombreAZ (data, item.name)
+      const SortData = abcOrder (data, item.name)
       bloqueTarjetas.innerHTML = tarjetas(SortData)
     }
     else if (item.name === "ZA") {
-      const SortData = OrdenarPorNombre (data, item.name)
+      const SortData = abcOrder (data, item.name)
       bloqueTarjetas.innerHTML = tarjetas(SortData)
     }
   })
 }
+
+const tipo= data.pokemon.reduce((acumulador, tipos) => {
+  if (tipos.type === 'psychic') {
+    return acumulador + 1
+    
+  } else {
+    return acumulador
+  }
+}, 1)
+
+console.log(tipo)
