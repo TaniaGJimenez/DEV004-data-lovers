@@ -12,10 +12,17 @@
       <img class="img-go" src="go.png" />
     </div>
     <div class="botones">
+
+      <div class="buscar">
+        <img class="input" src="b2 .png" alt=""> 
+        <input type="text" id="inputBuscar" placeholder="Buscar por nombre" required/>
+          
+      </div>
       <div class="dropdown">
         <button class="dropbtn">FILTRAR POR TIPO</button>
         <div class="dropdown-content">
           <ul class="menu-tipos">
+            <li><a href="#" name="todos" class="tipoPokemon">Todos los tipos </a></li>
             <li><a href="#" name="water" class="tipoPokemon">Agua</a></li>
             <li><a href="#" name="fire" class="tipoPokemon">Fuego</a></li>
             <li><a href="#" name="grass" class="tipoPokemon">Planta</a></li>
@@ -23,9 +30,7 @@
             <li><a href="#" name="rock" class="tipoPokemon">Roca</a></li>
             <li><a href="#" name="steel" class="tipoPokemon">Metal</a></li>
             <li><a href="#" name="ice" class="tipoPokemon">Hielo</a></li>
-            <li>
-              <a href="#" name="electric" class="tipoPokemon">Eléctrico</a>
-            </li>
+            <li><a href="#" name="electric" class="tipoPokemon">Eléctrico</a></li>
             <li><a href="#" name="dragon" class="tipoPokemon">Dragon</a></li>
             <li><a href="#" name="ghost" class="tipoPokemon">Fantasma</a></li>
             <li><a href="#" name="psychic" class="tipoPokemon">Psiquico</a></li>
@@ -39,12 +44,9 @@
           </ul>
         </div>
       </div>
-      <div class="buscar">
-        <input type="text" id="inputBuscar" placeholder="Buscar por nombre" />
-        <!-- <img src="b1 .png" alt="">  -->
-      </div>
+      
       <div class="dropdown">
-        <button class="dropbtn" id="btn-ordenar">ORDENAR</button>
+        <button class="dropbtn" id="btn-ordenar">ORDENAR POR NOMBRE</button>
         <div class="dropdown-content" >
           <a href="#" name="todos" class="Ordenar">Todos</a>
           <a href="#" name="AZ"  class="Ordenar"> A-Z </a>
@@ -52,17 +54,31 @@
         </div>
       </div>
       <div class="dropdown">
+        <button class="dropbtn" id="btn-Grafica">ESTADISTICA DE TIPOS</button>
+        <div class="dropdown-content">
+          <!-- <a href="#">A-Z</a>
+          <a href="#">Z-A</a> -->
+        </div>
+      </div>
+      <div class="dropdown">
         <button class="dropbtn" id="btn-calcular">Top 10</button>
         <div class="dropdown-content">
-          <a href="#">A-Z</a>
-          <a href="#">Z-A</a>
+          <a href="#">los 10 mas</a>
+          <a href="#">los 10 mas</a>
         </div>
       </div>
     </div>
   </header>
   <body>
     <main>
+
+      <div class="grafica" id="grafica">
+      <h1>TABLA</h1>
+      </div>
+
       <div class="bloqueTarjetas" id="bloqueTarjetas"></div>
+
+     
     </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
