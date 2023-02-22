@@ -6,6 +6,7 @@
     <title>Pokémon-Go</title>
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <header class="header">
     <div>
@@ -71,16 +72,30 @@
   </header>
   <body>
     <main>
-
-      <div class="grafica" id="grafica">
-      <h1>TABLA</h1>
-      </div>
-
+      <div class="container">
+        <button id="toggle-table-btn" class="dropbtn">ESTADISTICA DE TIPOS</button>
+        <table id="my-table" class="hidden">
+          <thead>
+            <tr>
+              <th>TIPO</th>
+              <th>ESTADISTICA</th>             
+            </tr>
+          </thead>
+          <tbody id="tablaDatos">
+            <!-- Las filas se agregarán con JavaScript -->
+          </tbody>
+        </table>
+        <canvas id="my-chart" width="600" height="400"></canvas>
+        </div>
+      
+      
+      
       <div class="bloqueTarjetas" id="bloqueTarjetas"></div>
 
      
     </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>
