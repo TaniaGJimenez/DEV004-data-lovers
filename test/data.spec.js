@@ -174,8 +174,7 @@ describe('abcOrder', () => {
     expect(typeof abcOrder).toBe('function');
   })
   it('abcOrder(data ) retorna un objeto', () => {
-    const midata=JSON.parse(JSON.stringify(data))
-    expect(typeof abcOrder(midata).toBe('object'));
+    expect(typeof abcOrder(data).toBe('object'));
   });
 
 });

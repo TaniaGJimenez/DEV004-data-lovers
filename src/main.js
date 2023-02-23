@@ -116,51 +116,37 @@ toggleTableBtn.addEventListener("click", () => {
 
     table.appendChild(row);
   }
-
-  // const canvas = document.getElementById("my-chart");
-  // const ctx = canvas.getContext("2d");
-
-  const chart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: [
-        "psychic",
-        "ground",
-        "water",
-        "fighting",
-        "normal",
-        "ghost",
-        "grass",
-        "poison",
-        "flying",
-        "dark",
-        "fairy",
-        "dragon",
-        "rock",
-        "steel",
-        "ice",
-        "electric"
-      ],
-      datasets: [
-        {
-          label: "TOTAL DE POKEON",
-          data: [arrayTotalTypes.total],
-          backgroundColor: "blue",
-          borderColor: '#36A2EB',
-        },
-      ],
-    },
-    options: {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
-    },
-  });
 });
 
+// const canvas = document.getElementById("my-chart");
+// const ctx = canvas.getContext("2d");
+
+//   const canvas = document.getElementById("my-chart");
+//   const ctx = canvas.getContext("2d");
+
+//   const chart = new Chart(ctx, {
+//     type: "bar",
+//     data: {
+//       labels: arrayTotalTypes.map((item) => item.type.toUpperCase()),
+//       datasets: [
+//         {
+//           label: "TOTAL DE POKEMONES",
+//           data: arrayTotalTypes.map((item) => item.total),
+//           backgroundColor: "blue",
+//           borderColor: '#36A2EB',
+//         },
+//       ],
+//     },
+//     options: {
+//       scales: {
+//         yAxes: [
+//           {
+//             ticks: {
+//               beginAtZero: true,
+//             },
+//           },
+//         ],
+//       },
+//     },
+//   });
+// });
