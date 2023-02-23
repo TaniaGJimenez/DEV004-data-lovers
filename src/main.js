@@ -102,6 +102,7 @@ toggleTableBtn.addEventListener("click", () => {
   myTable.classList.toggle("hidden");
 
   const table = document.getElementById("tablaDatos");
+  table.innerHTML = "";
   for (let i = 0; i < arrayTotalTypes.length; i++) {
     const row = document.createElement("tr");
     const coldName = document.createElement("td");
@@ -143,6 +144,7 @@ toggleTableBtn.addEventListener("click", () => {
           label: "TOTAL DE POKEON",
           data: [arrayTotalTypes.total],
           backgroundColor: "blue",
+          borderColor: '#36A2EB',
         },
       ],
     },

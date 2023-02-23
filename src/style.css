@@ -175,9 +175,7 @@ a:visited {
 }
 
 
-.container {
-  margin: 20px;
-}
+
 
 
 
@@ -186,7 +184,7 @@ table {
   border-collapse: collapse;
   margin-top: 10px;
   border-style: inset;
-  align-content : center;
+  
   background:url(fondo.jpg);
 }
 
@@ -205,7 +203,11 @@ th {
   display: none;
 }
  
-
+.my-chart{
+  display: none;
+  width:50% ;
+  height:40%;
+}
 
 
 
