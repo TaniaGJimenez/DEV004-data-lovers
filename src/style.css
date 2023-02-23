@@ -176,16 +176,19 @@ a:visited {
 
 
 
-
+.container{
+  align-content: center;
+}
 
 
 table {
   width: 50%;
   border-collapse: collapse;
-  margin-top: 10px;
+  /* // margin-top: 10px; */
   border-style: inset;
-  
+  text-align: center;
   background:url(fondo.jpg);
+  margin: 0 auto;
 }
 
 th, td {
