@@ -22,7 +22,9 @@ export const filtrarTipos = (data, tipo) => {
 };
 
 export const buscarPorNombre = (data, nombreBuscar) => {
-  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.name.startsWith(nombreBuscar))
+  const withoutSpaces = nombreBuscar.trim();
+  //const withoutSpaces = nombreBuscar.replace(/\s/g, '');
+  const dataFiltrada = data.pokemon.filter((pokemon) => pokemon.name.startsWith(withoutSpaces))
   return { pokemon: dataFiltrada }
 };
 

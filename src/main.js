@@ -97,9 +97,11 @@ console.log(arrayTotalTypes);
 
 const toggleTableBtn = document.getElementById("toggle-table-btn");
 const myTable = document.getElementById("my-table");
+//const myChart = document.getElementById("my-chart");
 
 toggleTableBtn.addEventListener("click", () => {
   myTable.classList.toggle("hidden");
+  //myChart.classList.toggle("hidden");
 
   const table = document.getElementById("tablaDatos");
   table.innerHTML = "";
@@ -118,46 +120,47 @@ toggleTableBtn.addEventListener("click", () => {
   // const canvas = document.getElementById("my-chart");
   // const ctx = canvas.getContext("2d");
 
-  // const chart = new Chart(ctx, {
-  //   type: "bar",
-  //   data: {
-  //     labels: [
-  //       "psychic",
-  //       "ground",
-  //       "water",
-  //       "fighting",
-  //       "normal",
-  //       "ghost",
-  //       "grass",
-  //       "poison",
-  //       "flying",
-  //       "dark",
-  //       "fairy",
-  //       "dragon",
-  //       "rock",
-  //       "steel",
-  //       "ice",
-  //       "electric"
-  //     ],
-  //     datasets: [
-  //       {
-  //         label: "TOTAL DE POKEON",
-  //         data: [arrayTotalTypes.total],
-  //         backgroundColor: "blue",
-  //         borderColor: '#36A2EB',
-  //       },
-  //     ],
-  //   },
-  //   options: {
-  //     scales: {
-  //       yAxes: [
-  //         {
-  //           ticks: {
-  //             beginAtZero: true,
-  //           },
-  //         },
-  //       ],
-  //     },
-  //   },
+  const chart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: [
+        "psychic",
+        "ground",
+        "water",
+        "fighting",
+        "normal",
+        "ghost",
+        "grass",
+        "poison",
+        "flying",
+        "dark",
+        "fairy",
+        "dragon",
+        "rock",
+        "steel",
+        "ice",
+        "electric"
+      ],
+      datasets: [
+        {
+          label: "TOTAL DE POKEON",
+          data: [arrayTotalTypes.total],
+          backgroundColor: "blue",
+          borderColor: '#36A2EB',
+        },
+      ],
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
 });
 
