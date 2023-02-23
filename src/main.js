@@ -97,9 +97,11 @@ console.log(arrayTotalTypes);
 
 const toggleTableBtn = document.getElementById("toggle-table-btn");
 const myTable = document.getElementById("my-table");
+//const myChart = document.getElementById("my-chart");
 
 toggleTableBtn.addEventListener("click", () => {
   myTable.classList.toggle("hidden");
+  //myChart.classList.toggle("hidden");
 
   const table = document.getElementById("tablaDatos");
   table.innerHTML = "";
@@ -121,28 +123,11 @@ toggleTableBtn.addEventListener("click", () => {
   const chart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: [
-        "psychic",
-        "ground",
-        "water",
-        "fighting",
-        "normal",
-        "ghost",
-        "grass",
-        "poison",
-        "flying",
-        "dark",
-        "fairy",
-        "dragon",
-        "rock",
-        "steel",
-        "ice",
-        "electric"
-      ],
+      labels: arrayTotalTypes.map((item) => item.type.toUpperCase()),
       datasets: [
         {
-          label: "TOTAL DE POKEON",
-          data: [arrayTotalTypes.total],
+          label: "TOTAL DE POKEMONES",
+          data: arrayTotalTypes.map((item) => item.total),
           backgroundColor: "blue",
           borderColor: '#36A2EB',
         },
