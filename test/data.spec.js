@@ -12,7 +12,6 @@ const data =
         "poison",
       ],
     },
-
     {
       "num": "003",
       "name": "venusaur",
@@ -20,9 +19,7 @@ const data =
       "type": [
         "grass",
         "poison"],
-    
     },
-  
     {
       "num": "004",
       "name": "charmander",
@@ -32,12 +29,9 @@ const data =
       ],
     },
     {
-  
-  
       "num": "005",
       "name": "charmeleon",
       "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
-    
       "type": [
         "fire"
       ],
@@ -71,51 +65,13 @@ describe('filtrarTipos', () => {
   it('filtrarTipos(data, tipo) retorna un objeto', () => {
     expect(typeof filtrarTipos(data,"fire")).toBe('object');
   })
-});
 
-describe('buscarPorNombre', () => {
-  it('is a function', () => {
-    expect(typeof buscarPorNombre).toBe('function');
-  });
-  it('buscarPorNombre(data,buscarPorNombre ) retorna un objeto', () => {
-    expect(typeof buscarPorNombre(data,"ch")).toBe('object');
-  });
-  it('buscarPorNombre(data,buscarPorNombre ) retorna un array vacio cuando buscamos un nombre de pokemon q no existe', () => {
-    const resultadoEsperado = { 
-      pokemon: [
-        {
-          "num": "004",
-          "name": "charmander",
-          "img": "https://www.serebii.net/pokemongo/pokemon/004.png",
-          "type": [
-            "fire"
-          ],
-        },
-        {
-      
-      
-          "num": "005",
-          "name": "charmeleon",
-          "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
-        
-          "type": [
-            "fire"
-          ],
-        },
-        {
-          "num": "006",
-          "name": "charizard",
-          "img": "https://www.serebii.net/pokemongo/pokemon/006.png",
-          "type": [
-            "fire",
-            "flying"
-          ],
-        },
-        
-      ] };
-    const resultadoObtenido = buscarPorNombre(
-      pokemon: { 
-        pokemon: [
+  it('filtrarTipos(data,tipo) retorna un arreglo de objetos filtrados', () => {
+    expect(filtrarTipos(data, "fire")).toStrictEqual(
+      {
+        "pokemon": [
+         
+          
           {
             "num": "004",
             "name": "charmander",
@@ -125,12 +81,9 @@ describe('buscarPorNombre', () => {
             ],
           },
           {
-        
-        
             "num": "005",
             "name": "charmeleon",
             "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
-          
             "type": [
               "fire"
             ],
@@ -144,10 +97,50 @@ describe('buscarPorNombre', () => {
               "flying"
             ],
           },
-          
+        ],
+      }); 
+
+  });
+});
+describe('buscarPorNombre', () => {
+  it('is a function', () => {
+    expect(typeof buscarPorNombre).toBe('function');
+  });
+  it('buscarPorNombre(data,buscarPorNombre ) retorna un objeto', () => {
+    expect(typeof buscarPorNombre(data,"ch")).toBe('object');
+  });
+  it('buscarPorNombre(data,buscarPorNombre ) retorna los pokemones que coinciden con las primeras letras de su nombre', () => {
+    expect(typeof buscarPorNombre(data,"ch")).toStrictEqual(
+      {
+        "pokemon": [
+          {
+            "num": "004",
+            "name": "charmander",
+            "img": "https://www.serebii.net/pokemongo/pokemon/004.png",
+            "type": [
+              "fire"
+            ],
+          },
+          {
+            "num": "005",
+            "name": "charmeleon",
+            "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
+            "type": [
+              "fire"
+            ],
+          },
+          {
+            "num": "006",
+            "name": "charizard",
+            "img": "https://www.serebii.net/pokemongo/pokemon/006.png",
+            "type": [
+              "fire",
+              "flying"
+            ],
+          },
         ] });
-    expect(resultadoObtenido).toStrictEqual(resultadoEsperado);
-  })
+    
+  });
   it('buscarPorNombre(data,buscarPorNombre ) retorna un array con un elemento cuando buscamos `charmander`', () => {
     const resultadoEsperado = {
       pokemon: [
@@ -178,11 +171,12 @@ describe('buscarPorNombre', () => {
 // });
 describe('abcOrder', () => {
   it('is a function', () => {
-    expect(typeof abcOrder).toStrictEqual('function');
+    expect(typeof abcOrder).toBe('function');
   })
-  it('abcOrder(data, order) ) retorna un objeto', () => {
-    expect(typeof abcOrder(data, order)).toBe('object');
+  it('abcOrder(data ) retorna un objeto', () => {
+    expect(typeof abcOrder(data).toBe('object'));
   });
+
 });
 
       
