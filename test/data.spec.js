@@ -1,4 +1,4 @@
-import {tarjetas,filtrarTipos,buscarPorNombre,OrdenarPorNombre,OrdenarPorNombreAZ} from '../src/data.js';
+import {tarjetas,filtrarTipos,buscarPorNombre,abcOrder} from '../src/data.js';
 
 const data =
 {
@@ -81,8 +81,71 @@ describe('buscarPorNombre', () => {
     expect(typeof buscarPorNombre(data,"ch")).toBe('object');
   });
   it('buscarPorNombre(data,buscarPorNombre ) retorna un array vacio cuando buscamos un nombre de pokemon q no existe', () => {
-    const resultadoEsperado = { pokemon: [] };
-    const resultadoObtenido = buscarPorNombre(data,"ch");
+    const resultadoEsperado = { 
+      pokemon: [
+        {
+          "num": "004",
+          "name": "charmander",
+          "img": "https://www.serebii.net/pokemongo/pokemon/004.png",
+          "type": [
+            "fire"
+          ],
+        },
+        {
+      
+      
+          "num": "005",
+          "name": "charmeleon",
+          "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
+        
+          "type": [
+            "fire"
+          ],
+        },
+        {
+          "num": "006",
+          "name": "charizard",
+          "img": "https://www.serebii.net/pokemongo/pokemon/006.png",
+          "type": [
+            "fire",
+            "flying"
+          ],
+        },
+        
+      ] };
+    const resultadoObtenido = buscarPorNombre(
+      pokemon: { 
+        pokemon: [
+          {
+            "num": "004",
+            "name": "charmander",
+            "img": "https://www.serebii.net/pokemongo/pokemon/004.png",
+            "type": [
+              "fire"
+            ],
+          },
+          {
+        
+        
+            "num": "005",
+            "name": "charmeleon",
+            "img": "https://www.serebii.net/pokemongo/pokemon/005.png",
+          
+            "type": [
+              "fire"
+            ],
+          },
+          {
+            "num": "006",
+            "name": "charizard",
+            "img": "https://www.serebii.net/pokemongo/pokemon/006.png",
+            "type": [
+              "fire",
+              "flying"
+            ],
+          },
+          
+        ] });
     expect(resultadoObtenido).toStrictEqual(resultadoEsperado);
   })
   it('buscarPorNombre(data,buscarPorNombre ) retorna un array con un elemento cuando buscamos `charmander`', () => {
@@ -113,14 +176,13 @@ describe('buscarPorNombre', () => {
 //     expect(anotherExample()).toBe('OMG');
 //   });
 // });
-describe('OrdenarPorNombre', () => {
+describe('abcOrder', () => {
   it('is a function', () => {
-    expect(typeof OrdenarPorNombre).toStrictEqual('function');
+    expect(typeof abcOrder).toStrictEqual('function');
   })
+  it('abcOrder(data, order) ) retorna un objeto', () => {
+    expect(typeof abcOrder(data, order)).toBe('object');
+  });
 });
-describe('OrdenarPorNombreAZ', () => {
-  it('is a function', () => {
-    expect(typeof OrdenarPorNombreAZ).toBe('function');
-  })
-});
+
       
