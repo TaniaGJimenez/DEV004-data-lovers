@@ -86,14 +86,14 @@ const arrayTypes = [
 const arrayTotalTypes = [];
 
 for (let index = 0; index < arrayTypes.length; index++) {
-  console.log(filtrarTipos(data, arrayTypes[index]).pokemon.length);
+  //console.log(filtrarTipos(data, arrayTypes[index]).pokemon.length);
   //objTotalTypes.arrayTypes[index] = filtrarTipos(data,arrayTypes[index]).pokemon.length
   arrayTotalTypes.push({
     type: arrayTypes[index],
     total: filtrarTipos(data, arrayTypes[index]).pokemon.length,
   });
 }
-console.log(arrayTotalTypes);
+//console.log(arrayTotalTypes);
 
 const toggleTableBtn = document.getElementById("toggle-table-btn");
 const myTable = document.getElementById("my-table");
