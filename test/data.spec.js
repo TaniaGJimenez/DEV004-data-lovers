@@ -194,12 +194,4 @@ describe("abcOrder", () => {
     expect({ pokemon: result }).toEqual(expected);
   });
 
-  /////////////Revisa esta porque no estoy segura de si usarla jaja.
-  it("verifica que los nombres esten en orden alfabetico", () => {
-    const orderedData = abcOrder(data, "AZ").pokemon;    for (let i = 0; i < orderedData.length - 1; i++) {
-      expect(orderedData[i].name < orderedData[i + 1].name).toBe(true);
-    }
-  });
-
-
 });
