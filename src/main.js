@@ -1,10 +1,13 @@
-import { tarjetas, filtrarTipos, buscarPorNombre, abcOrder, orderByMxCP } from "./data.js";
+import { tarjetas, filtrarTipos, buscarPorNombre, abcOrder } from "./data.js";
 
 import data from "./data/pokemon/pokemon.js";
 
 const todos = {
   pokemon: [...data.pokemon],
 };
+
+
+
 
 //import pokemon from './data/pokemon/pokemon.js';
 //const pokemonDB = data.pokemon
@@ -24,6 +27,18 @@ bloqueTarjetas.innerHTML = tarjetas(data);
 const tipoPokemon = document.getElementsByClassName("tipoPokemon");
 const inputBuscar = document.getElementById("inputBuscar");
 const Ordenar = document.getElementsByClassName("Ordenar");
+
+const dropdownBtns = document.querySelectorAll('.dropbtn');
+dropdownBtns.forEach((button) => {
+  const dropdownContent = document.getElementById(button.dataset.target);
+  const options = dropdownContent.querySelectorAll('a');
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      button.textContent = option.textContent.toUpperCase();
+    });
+    option.textContent = option.textContent.toUpperCase();
+  });
+});
 
 for (const tipo of tipoPokemon) {
   tipo.addEventListener("click", () => {

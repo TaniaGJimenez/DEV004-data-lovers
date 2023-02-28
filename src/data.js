@@ -4,18 +4,14 @@ export const tarjetas = (data) => {
   for (const pokemon of data.pokemon) {
     tarjetaString += `
     <div class="card">
-      <div class="front">
-        <section class="tarjeta">
+      <div class="front tarjeta">
         <img class="imagenPokemon" src=${pokemon.img} >
         <p>#${pokemon.num}<br>${pokemon.name.toUpperCase()}</p> 
-     </div> 
-        <div class="back">
-            <h1>${pokemon.about}</h1>
-        
-        </div>
-        </section>
-    </div>
-    `;
+    </div> 
+      <div class="back tarjeta" >
+        <h1 class="about">${pokemon.about}<h1>
+      </div>
+    </div>`;
   }
   return tarjetaString;
 };
