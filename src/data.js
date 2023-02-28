@@ -3,12 +3,18 @@ export const tarjetas = (data) => {
   let tarjetaString = "";
   for (const pokemon of data.pokemon) {
     tarjetaString += `
-      <section class="tarjeta">
+    <div class="card">
+      <div class="front">
+        <section class="tarjeta">
         <img class="imagenPokemon" src=${pokemon.img} >
         <p>#${pokemon.num}<br>${pokemon.name.toUpperCase()}</p> 
+     </div> 
+        <div class="back">
+            <h1>${pokemon.about}</h1>
         
+        </div>
+        </section>
     </div>
-    </section>
     `;
   }
   return tarjetaString;
@@ -46,3 +52,14 @@ export function abcOrder(data, order) {
     return {pokemon:inverso}
   }
 }
+export const orderByMxCP = (option, data) => {
+  switch (option) {
+  case "1":
+    data.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
+    break;
+  default:
+    data.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
+    data.reverse();
+  }
+  return {pokemon:data};
+};

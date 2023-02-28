@@ -1,4 +1,4 @@
-import { tarjetas, filtrarTipos, buscarPorNombre, abcOrder } from "./data.js";
+import { tarjetas, filtrarTipos, buscarPorNombre, abcOrder, orderByMxCP } from "./data.js";
 
 import data from "./data/pokemon/pokemon.js";
 
@@ -36,11 +36,15 @@ for (const tipo of tipoPokemon) {
   });
 }
 
-inputBuscar.addEventListener("input", () => {
-  if (inputBuscar === "") {
-    alert("No dejes el campo vacio");
-  }
+inputBuscar.addEventListener("input", function () {
+ 
   const FiltroNombre = buscarPorNombre(data, inputBuscar.value);
+  FiltroNombre.value.trim().substring(0, 3);
+  
+  if (FiltroNombre.length === 0) {
+
+    alert("No se encontraron resultados");
+  }
   bloqueTarjetas.innerHTML = tarjetas(FiltroNombre);
 });
 // inputBuscar.addEventListener('input', () => {
@@ -64,7 +68,13 @@ for (const item of Ordenar) {
     }
   });
 }
-
+// orderMaxPC.addEventListener("change", (e) => {
+//   const arrayorderMaxPC = orderByMxCP(e.target.value, arrayShow);
+//   resultText.textContent = "0";
+//   bodyFilter.innerHTML = "";
+//   bloqueTarjetas.innerHTML = tarjetas(orderMaxPC);
+    
+// });
 const arrayTypes = [
   "psychic",
   "ground",
@@ -90,7 +100,7 @@ for (let index = 0; index < arrayTypes.length; index++) {
   //objTotalTypes.arrayTypes[index] = filtrarTipos(data,arrayTypes[index]).pokemon.length
   arrayTotalTypes.push({
     type: arrayTypes[index],
-    total: filtrarTipos(data, arrayTypes[index]).pokemon.length,
+    total: filtrarTipos(data, arrayTypes[index]).pokemon.length / 100,
   });
 }
 //console.log(arrayTotalTypes);
