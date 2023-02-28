@@ -1,3 +1,4 @@
+/*Encabezado con banner al fondo*/
 .header{
   background-color:#230C2E ;
   position:sticky; top:0;
@@ -9,106 +10,116 @@
   justify-content: space-between;
  
   }
-  
+  /*Imagen de Pokemon Go al centro del Encabezado*/
   .img-go{
     max-width: 250px;
     display: block;
     margin: 0 auto;
   }
+ 
 body{
   background: #f1ee3d;
   font-family: Consolas;
 }  
 
-  #bloqueTarjetas {
-    display: flex;
-    padding: 20px 30px;
-    flex-wrap: wrap;
-    gap: 5%;
-    
+
+/*División de Tarjetas*/
+#bloqueTarjetas {
+  display: flex;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+  gap: 5%;
   }
-  .tarjeta {
-    border-width: 10px;
-    border:6px   double
-    #230C2E;
-    margin: 30px 20px;
-    border-radius: 20px;
-    width: 16%;
-    gap: 15px;
-    text-align: center;
-    margin-bottom: 20px;
-    height: 40vh;
-    background:url(fondo.jpg);
-    display: flex;
-    flex-direction: column ;
-    padding-bottom: 50px;
-    
+ 
+  /*Tarjeta de Pokemon con bordes*/
+.tarjeta {
+  border-width: 10px;
+  border:6px   double
+  #230C2E;
+  margin: 30px 20px;
+  border-radius: 20px;
+  width: 16%;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 40vh;
+  background:url(fondo.jpg);
+  display: flex;
+  flex-direction: column ;
+  padding-bottom: 50px;
    
-    
+   
+   
    
   }
-  p{
-      margin-bottom: 5px;
-      text-align: center;
-      font-size: 20px;
-      color: #230C2E;
-    }
-  
-  
-  .imagenPokemon {
-    width: 90%;
-    /* /margin-left: auto;
-    margin-right: auto; */
-    /* margin: auto; */
-    margin-top: 10px;
-    justify-content: center;
-    margin-bottom: 10px;
+
+
+/*Imagen de Pokemon*/
+.imagenPokemon {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+
+  /*Nombre y Num de Cada Pokemon*/  
+p{
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #230C2E;
   }
+
+
   .dropbtn {
     background-color: #0075BE;
     color: white;
-    padding: 16px;
+    padding: 15px;
     font-size: 12px;
     margin: 10px;
     cursor: pointer;
     border-radius:10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-   
+    border:none;
 }
 
-/* The container <div> - needed to position the dropdown content */
+
+/*Posición del Menú Desplegable */
 .dropdown {
-    position: relative;
-    display: inline;
-   
+  position: relative;
+  display: inline;
 }
 
 
-/* Dropdown Content (Hidden by Default) */
+/* Menú desplegable Escondido por Default*/
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #f5f10c;
     min-width: 160px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    z-index: 1;
+        
 }
 
-/* Links inside the dropdown -- RESOLVER AQUI*/
+
+/*Estilo adentro del Menú Desplegable*/
 .dropdown-content a {
-    margin:5px;
-    text-decoration: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    
+  margin:5px;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color:#FFCC00
+
+/* Estilo de los links en hover */
+.dropdown-content a:hover {
+background-color:#FFCC00;
+color:black;
 }
 
-/* Show the dropdown menu on hover */
+
+/*Menu desplegable estilo*/
 .dropdown:hover .dropdown-content {
   display: block;
   position: absolute;
@@ -116,8 +127,8 @@ body{
   border-radius: 15px;
   background-color: #203079;
   /* column-count: 2; */
-
 }
+
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
@@ -126,42 +137,128 @@ body{
 }
 
 
- .menu-tipos{
-    list-style:none;
+.menu-tipos{
+  list-style:none;
+}
+ 
+.menu-tipos ul {
+  list-style: none;
+  width: 5%;
+  text-align: center;
+}
+ 
+a:visited {
+  color:white ;
+}
+
+
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   }
+ 
+.buscar input[type="text"]{
+  width: 100%;
+  display:flex;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 10px;
+  text-align: right;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border:none;
+ 
+}
+ 
+.buscar{
+  display:flex;
+}
+
+
+
+.container{
+  align-content: center;
+}
+
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  /* // margin-top: 10px; */
+  border-style: inset;
+  text-align: center;
+  background:url(fondo.jpg);
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #0075BE;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+ 
+.my-chart{
+  display: none;
+  width:50% ;
+  height:40%;
+}
+
+
+.card div {
+ 
+  display: flex;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.card .front {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   
-/*  .menu-tipos ul {
-    list-style: none;
-    width: 5%;
-    text-align: center;
+  transform: perspective(200px) rotateY(0deg);
+}
 
-  }
-*/  
-  a:visited {
-    color:white;
-  }
-  a:hover {
-    color:black;
-  }  
- .botones{
-   display: flex;
-   
-   align-items: center;
-   justify-content: space-between;
-   }
+.card .back {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(200px) rotateY(180deg);
+}
+
+
+.card:hover .front {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   
-   .buscar input{
-    width: 100%;
-    display: flex;
-    font-size: 20px;
-    padding: 2px;
-    border-radius: 15px;
-    text-align: right;
-   justify-content: flex-end;
-   position: relative;
-   margin: 10px;
-  }
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .back {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   
+  transform: perspective(100px) rotateY(360deg);
+}
+
+.card div h1 {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 100px;
+  color: #f1f1f1;
+}
 
 
 
@@ -189,15 +286,36 @@ body{
 
 
 
-   /* para despositivos moviles  */
-  @media (max-width: 800px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* para despositivos moviles  */
+@media (max-width: 800px){
     #bloqueTarjetas {
         gap: 20%;
-  
+ 
     }
     .tarjeta {
         width: 50%;
-  
+ 
     }
     .dropbtn {
       background-color: #0075BE;
@@ -206,7 +324,7 @@ body{
       font-size: 10%
     }
     .buscar input{
-      width: 10%;
+      width: 70vw;
       display: flex;
       font-size: 5%;
       border-radius: 15px;
@@ -214,11 +332,32 @@ body{
      justify-content: flex-end;
      position: relative;
     }
-  
+    .botones {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      flex-wrap: wrap;
+      font-size: 70%;
+      width: 100%;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1fd31f;
+      min-width: 160px;
+      /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+     
   }
-  @media (max-width: 800px){
+  }  
+@media (max-width: 800px){
     .img-go {
         width: 100%;
-  
+ 
     }
+    
   }
