@@ -6,6 +6,9 @@ const todos = {
   pokemon: [...data.pokemon],
 };
 
+
+
+
 //import pokemon from './data/pokemon/pokemon.js';
 //const pokemonDB = data.pokemon
 //OrdenarPorNombre,OrdenarPorNombreAZ,
@@ -25,6 +28,18 @@ const tipoPokemon = document.getElementsByClassName("tipoPokemon");
 const inputBuscar = document.getElementById("inputBuscar");
 const Ordenar = document.getElementsByClassName("Ordenar");
 
+const dropdownBtns = document.querySelectorAll('.dropbtn');
+dropdownBtns.forEach((button) => {
+  const dropdownContent = document.getElementById(button.dataset.target);
+  const options = dropdownContent.querySelectorAll('a');
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      button.textContent = option.textContent.toUpperCase();
+    });
+    option.textContent = option.textContent.toUpperCase();
+  });
+});
+
 for (const tipo of tipoPokemon) {
   tipo.addEventListener("click", () => {
     if (tipo.name === "todos") {
@@ -36,11 +51,15 @@ for (const tipo of tipoPokemon) {
   });
 }
 
-inputBuscar.addEventListener("input", () => {
-  if (inputBuscar === "") {
-    alert("No dejes el campo vacio");
-  }
+inputBuscar.addEventListener("input", function () {
+ 
   const FiltroNombre = buscarPorNombre(data, inputBuscar.value);
+  FiltroNombre.value.trim().substring(0, 3);
+  
+  if (FiltroNombre.length === 0) {
+
+    alert("No se encontraron resultados");
+  }
   bloqueTarjetas.innerHTML = tarjetas(FiltroNombre);
 });
 // inputBuscar.addEventListener('input', () => {
@@ -64,7 +83,13 @@ for (const item of Ordenar) {
     }
   });
 }
-
+// orderMaxPC.addEventListener("change", (e) => {
+//   const arrayorderMaxPC = orderByMxCP(e.target.value, arrayShow);
+//   resultText.textContent = "0";
+//   bodyFilter.innerHTML = "";
+//   bloqueTarjetas.innerHTML = tarjetas(orderMaxPC);
+    
+// });
 const arrayTypes = [
   "psychic",
   "ground",
@@ -90,7 +115,7 @@ for (let index = 0; index < arrayTypes.length; index++) {
   //objTotalTypes.arrayTypes[index] = filtrarTipos(data,arrayTypes[index]).pokemon.length
   arrayTotalTypes.push({
     type: arrayTypes[index],
-    total: filtrarTipos(data, arrayTypes[index]).pokemon.length,
+    total: filtrarTipos(data, arrayTypes[index]).pokemon.length / 100,
   });
 }
 //console.log(arrayTotalTypes);

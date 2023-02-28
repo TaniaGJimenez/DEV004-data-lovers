@@ -23,9 +23,9 @@
         />
       </div>
       <div class="dropdown">
-        <button class="dropbtn">FILTRAR POR TIPO</button>
-        <div class="dropdown-content">
-          <ul class="menu-tipos">
+        <button class="dropbtn" id="btn-filter" data-target="dropdown-content-filtrar">FILTRAR POR TIPO</button>
+        <div class="dropdown-content" id="dropdown-content-filtrar">
+          <div class="menu-tipos">
             <li>
               <a href="#" name="todos" class="tipoPokemon">Todos los tipos </a>
             </li>
@@ -36,9 +36,7 @@
             <li><a href="#" name="rock" class="tipoPokemon">Roca</a></li>
             <li><a href="#" name="steel" class="tipoPokemon">Metal</a></li>
             <li><a href="#" name="ice" class="tipoPokemon">Hielo</a></li>
-            <li>
-              <a href="#" name="electric" class="tipoPokemon">Eléctrico</a>
-            </li>
+            <li><a href="#" name="electric" class="tipoPokemon">Eléctrico</a></li>
             <li><a href="#" name="dragon" class="tipoPokemon">Dragon</a></li>
             <li><a href="#" name="ghost" class="tipoPokemon">Fantasma</a></li>
             <li><a href="#" name="psychic" class="tipoPokemon">Psiquico</a></li>
@@ -49,23 +47,23 @@
             <li><a href="#" name="flying" class="tipoPokemon">Volador</a></li>
             <li><a href="#" name="dark" class="tipoPokemon">Oscuro</a></li>
             <li><a href="#" name="fairy" class="tipoPokemon">Hada</a></li>
-          </ul>
+          </div>
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn" id="btn-ordenar">ORDENAR POR NOMBRE</button>
-        <div class="dropdown-content">
+        <button class="dropbtn" id="btn-ordenar" data-target="dropdown-content-ordenar">ORDENAR POR NOMBRE</button>
+        <div class="dropdown-content" id="dropdown-content-ordenar">
           <a href="#" name="todos" class="Ordenar">Todos</a>
           <a href="#" name="AZ" class="Ordenar"> A-Z </a>
           <a href="#" name="ZA" class="Ordenar"> Z-A </a>
         </div>
       </div>
       <div class="dropdown">
-        <button class="dropbtn" id="btn-calcular">Top 10</button>
-        <div class="dropdown-content">
-          <a href="#">los 10 mas</a>
-          <a href="#">los 10 mas</a>
+        <button class="dropbtn" id="btn-calcular" data-target="dropdown-content-calcular">Top 10</button>
+        <div class="dropdown-content" id="dropdown-content-calcular">
+          <a href="#" value="1"> Max CP </a> 
+          <a href="#" value="2"> Min CPl </a>
         </div>
       </div>
     </div>
@@ -73,7 +71,7 @@
   <body>
     <main>
       <div class="container">
-        <button id="toggle-table-btn" class="dropbtn">
+        <button id="toggle-table-btn" class="Stats">
           ESTADISTICA DE TIPOS
         </button>
         <table id="my-table" class="hidden">
@@ -84,7 +82,6 @@
             </tr>
           </thead>
           <tbody id="tablaDatos">
-            <!-- Las filas se agregarán con JavaScript -->
           </tbody>
         </table>
         <canvas id="my-chart" class="my-chart"></canvas>

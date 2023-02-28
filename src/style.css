@@ -5,10 +5,10 @@
   padding-bottom:25px;
   background:url(Im-go.jpg) center center no-repeat;
   background-size: cover;
-  width: 100;
-  height: 100;
+  /* width: 100;
+  height: 100; */
   justify-content: space-between;
- 
+  z-index: 1;
   }
   /*Imagen de Pokemon Go al centro del Encabezado*/
   .img-go{
@@ -26,27 +26,31 @@ body{
 /*División de Tarjetas*/
 #bloqueTarjetas {
   display: flex;
+  justify-content: center;
   padding: 20px 30px;
   flex-wrap: wrap;
   gap: 5%;
+  z-index: 0;
   }
  
   /*Tarjeta de Pokemon con bordes*/
 .tarjeta {
   border-width: 10px;
+  padding: 10px;
   border:6px   double
   #230C2E;
   margin: 30px 20px;
   border-radius: 20px;
-  width: 16%;
+  /* width: 16%; */
   gap: 15px;
   text-align: center;
+  align-items: center;
   margin-bottom: 20px;
   height: 40vh;
   background:url(fondo.jpg);
   display: flex;
   flex-direction: column ;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
    
    
    
@@ -56,10 +60,10 @@ body{
 
 /*Imagen de Pokemon*/
 .imagenPokemon {
-  width: 85%;
+  width:20vh;
   margin-top: 10px;
   margin-bottom: 10px;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 
@@ -84,7 +88,17 @@ p{
     border:none;
 }
 
-
+#toggle-table-btn{
+  background-color: #0075BE;
+    color: white;
+    padding: 15px;
+    font-size: 12px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border:none;
+}
 /*Posición del Menú Desplegable */
 .dropdown {
   position: relative;
@@ -151,6 +165,10 @@ a:visited {
   color:white ;
 }
 
+a:focus-within {
+  color: #fbff00;
+}
+
 
 .botones {
   display: flex;
@@ -158,7 +176,7 @@ a:visited {
   justify-content: space-evenly;
   }
  
-.buscar input{
+.buscar input[type="text"]{
   width: 100%;
   display:flex;
   font-size: 15px;
@@ -171,15 +189,12 @@ a:visited {
 }
  
 .buscar{
-  display:inline-flex;
+  display:flex;
 }
-
-
 
 .container{
   align-content: center;
 }
-
 
 table {
   width: 50%;
@@ -212,8 +227,52 @@ th {
   height:40%;
 }
 
+.card div {
+  display: flex;
+  backface-visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.1, 0.22, 0.8, 1.13);
+}
+
+.card .front {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(200px) rotateY(0deg);
+}
+
+.card .back {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(200px) rotateY(180deg);
+}
 
 
+.card:hover .front {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.front.tarjeta{
+  position: absolute;
+}
+.card:hover .back {
+  width: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  transform: perspective(100px) rotateY(360deg);
+}
+
+.about {
+  max-width: 100%;
+  text-align: justify;
+  padding: 10px;
+  font-size: 12px;
+  color:black;
+}
 
 
 
@@ -264,55 +323,62 @@ th {
 
 /* para despositivos moviles  */
 @media (max-width: 800px){
-    #bloqueTarjetas {
-        gap: 20%;
- 
-    }
-    .tarjeta {
-        width: 50%;
- 
-    }
-    .dropbtn {
-      background-color: #0075BE;
-      color: white;
-      padding: 16px;
-      font-size: 10%
-    }
-    .buscar input{
-      width: 70vw;
-      display: flex;
-      font-size: 5%;
-      border-radius: 15px;
-      text-align: right;
-     justify-content: flex-end;
-     position: relative;
-    }
-    .botones {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: row;
-      flex-wrap: wrap;
-      font-size: 70%;
-      width: 100%;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1fd31f;
-      min-width: 160px;
-      /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-     
+  #bloqueTarjetas {
+      gap: 20%;
+
   }
-  }  
+  .tarjeta {
+      width: 50%;
+
+  }
+  .dropbtn #toggle-table-btn {
+    background-color: #0075BE;
+    color: white;
+    padding: 16px;
+    font-size: 10%
+  }
+  .buscar input{
+    width: 70vw;
+    display: flex;
+    font-size: 5%;
+    border-radius: 15px;
+    text-align: right;
+   justify-content: flex-end;
+   position: relative;
+  }
+  .botones  {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 70%;
+    width: 100%;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1fd31f;
+    min-width: 160px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+   
+}
+.about {
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  color:black;
+}
+}  
 @media (max-width: 800px){
-    .img-go {
-        width: 100%;
- 
-    }
-    
+  .img-go {
+      width: 100%;
+
   }
+  
+}
