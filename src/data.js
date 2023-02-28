@@ -9,8 +9,11 @@ export const tarjetas = (data) => {
         <p>#${pokemon.num}<br>${pokemon.name.toUpperCase()}</p> 
     </div> 
       <div class="back tarjeta" >
-        <h1 class="about">${pokemon.about}<h1>
-      </div>
+      
+      <p> Ataque:<br> ${pokemon.stats["base-attack"]}<br>Defensa:<br> ${pokemon.stats["base-defense"]} <br>Resisencia:<br> ${pokemon.stats["base-stamina"]} <br>
+      Max-cp:<br> ${pokemon.stats["max-cp"]}<br>Max-hp:<br> ${pokemon.stats["max-hp"]}</p>
+      
+    </div>
     </div>`;
   }
   return tarjetaString;

@@ -311,24 +311,40 @@ hacerlo es creando _interfaces_ y _visualizaciones_.
 - [x] **Que el codigo no marque error.**
 - [x] **Despliegue en github.**
 - [x] **Testing**
+## HU5:Tabular y Graficar los pokemones segun su tipo 
+
+### Quien -> Yo, como usuario 
+### Qué?-> conocer cuantos pokemones hay en cada tipo.
+### Para?-> Reconocerlos mas facil  los pokemones por tipo para la batalla pokemon que tenga.
+#### Criterios de Aceptación
+
+- [x] **Un botón que muestre una tabla y grafica con los tipos de pokemones**
+#### Definición de terminado
+  
+- [x] **Fiel al prototipo**
+- [x] **Que el codigo no marque error.**
+- [x] **Despliegue en github.**
+- [x] **Testing**
 
 
 ## 5.Diseño de la Interfaz de Usuario
 
 
 #### Prototipo de baja fidelidad
-   ![Prototipo baja fidelidad](./src/imgREADME/baja_fidelidad.jpg)
+   ![Prototipo baja fidelidad](prototipobaja.jpg)
 
 #### Prototipo de alta fidelidad
    [Prototipo de alta fidelidad]( fidelidad
 
 
 #### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+Mediante el uso del slack se pidio feedback del testeo de nuestra pagina desplegada en github, y el resultado sigirente:
+[X]**En el filtro por tipo, podrían agregar la opción "todos" para no tener que retroceder para ver todos los pokemons otra vez.**
+[X]**las imágenes de los pokemones centrarlos un poco y en el buscar por nombre, capaz que las letras podrián ser de un tamaño mas pequeño..Espero que les sirva..saluditos**
+[x]**cuando selecciono un filtro nunca me indica que fue lo que filtre, esa info siempre debe ser visible para el usuario lo que podrian hacer es cambiar el texto del boton por la opcion seleccionada**
+[x]**como no hay nada debajo del nombre del pokemon podrian reducir el tamaño de la carta y asi mostrar mas pokemones**
+[x]**tal vez echar un ojo en las funciones de ordenar para unificrlas dado que son basicamente el mismo codigo**
+[x]**Modificar el header de un color solido a uno mas vistoso en este caso fue una imagen acorde con la pagina.**
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
@@ -338,11 +354,11 @@ Tu tiempo de hacking es escaso, así que deberás priorizar
 
 Como mínimo, tu implementación debe:
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
+[x]1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
    etc.
-2. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
+[x]2. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
    tamaños de pantallas: móviles, tablets y desktops.
-3. Que la interfaz siga los fundamentos de _visual design_.
+[x]3. Que la interfaz siga los fundamentos de _visual design_.
 
 ### Pruebas unitarias
 
@@ -360,20 +376,20 @@ en la sección de [Consideraciones técnicas](#srcdatajs).
 * [x] Usa VanillaJS.
 * [x] Pasa linter (`npm run pretest`)
 * [x] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye historias de usuario en `README.md`.
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite filtrar data en base a una condición.
+* [x] UI: Es _responsive_.
 
 
 ## 6. Consideraciones técnicas

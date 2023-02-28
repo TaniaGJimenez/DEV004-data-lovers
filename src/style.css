@@ -166,7 +166,7 @@ a:visited {
 }
 
 a:focus-within {
-  color: red;
+  color: #fbff00;
 }
 
 
@@ -323,55 +323,62 @@ th {
 
 /* para despositivos moviles  */
 @media (max-width: 800px){
-    #bloqueTarjetas {
-        gap: 20%;
- 
-    }
-    .tarjeta {
-        width: 50%;
- 
-    }
-    .dropbtn {
-      background-color: #0075BE;
-      color: white;
-      padding: 16px;
-      font-size: 10%
-    }
-    .buscar input{
-      width: 70vw;
-      display: flex;
-      font-size: 5%;
-      border-radius: 15px;
-      text-align: right;
-     justify-content: flex-end;
-     position: relative;
-    }
-    .botones {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: row;
-      flex-wrap: wrap;
-      font-size: 70%;
-      width: 100%;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #1fd31f;
-      min-width: 160px;
-      /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-     
+  #bloqueTarjetas {
+      gap: 20%;
+
   }
-  }  
+  .tarjeta {
+      width: 50%;
+
+  }
+  .dropbtn #toggle-table-btn {
+    background-color: #0075BE;
+    color: white;
+    padding: 16px;
+    font-size: 10%
+  }
+  .buscar input{
+    width: 70vw;
+    display: flex;
+    font-size: 5%;
+    border-radius: 15px;
+    text-align: right;
+   justify-content: flex-end;
+   position: relative;
+  }
+  .botones  {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 70%;
+    width: 100%;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1fd31f;
+    min-width: 160px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+   
+}
+.about {
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  color:black;
+}
+}  
 @media (max-width: 800px){
-    .img-go {
-        width: 100%;
- 
-    }
-    
+  .img-go {
+      width: 100%;
+
   }
+  
+}
