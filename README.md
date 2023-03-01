@@ -154,13 +154,18 @@ hacerlo es creando _interfaces_ y _visualizaciones_.
 
   ### **Prototipo de alta fidelidad**
    <p align="center">
-  <img src="./src/PrototipoAlta.png" alt="Prototipo baja fidelidad" style="max-width:50%;">
+  <img src="./src/PrototipoAlta.png" alt="Prototipo alta fidelidad" style="max-width:50%;">
 </p>
 Para crear el prototipo de alta fidelidad, nos basamos en el prototipo de baja fidelidad que habíamos desarrollado anteriormente. Utilizamos una herramienta de diseño para crear una versión más refinada del prototipo, en el que incluimos más detalles visuales y funcionales.
 Comenzamos por agregar más detalles a las diferentes secciones y elementos de la interfaz gráfica, tales como iconos, colores, imágenes, texturas y otros elementos visuales que mejoraran la experiencia de usuario. También ajustamos el tamaño y posición de los diferentes elementos para mejorar la accesibilidad y la legibilidad de la información.
 A medida que agregamos cada historia de usuario, modificamos el prototipo de alta fidelidad, ajustando y modificando la interfaz gráfica para que coincidiera con los requisitos de la historia de usuario en cuestión. Esto nos permitió garantizar que la interfaz gráfica cumpliera con los criterios de aceptación definidos y ofreciera la mejor experiencia de usuario posible.
 
-  ### **Testeos de usabilidad**
+  ### **Producto Final**
+   <p align="center">
+  <img src="./src/ProductoFinal.png" alt="Producto Final" style="max-width:50%;">
+</p>  
+
+### **Testeos de usabilidad**
 Para evaluar la usabilidad de nuestra página web, realizamos pruebas con usuarios reales y solicitamos su feedback a través del canal de Slack del equipo. Los usuarios (compañeras y coaches) probaron la página desplegada en GitHub y nos brindaron sus opiniones y sugerencias para mejorar la navegación y la experiencia de usuario. A partir de estos test de usabilidad, pudimos identificar áreas de mejora y realizar ajustes en la interfaz para lograr una mejor experiencia para el usuario.
    - [X] *En el filtro por tipo, podrían agregar la opción "todos" para no tener que retroceder para ver todos los pokemons otra vez.*
    - [X] *Las imágenes de los pokemones centrarlos un poco y en el buscar por nombre, capaz que las letras podrián ser de un tamaño mas pequeño..Espero que les sirva..saluditos*
