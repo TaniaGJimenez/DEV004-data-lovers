@@ -19,11 +19,11 @@ export const tarjetas = (data) => {
   }
   return tarjetaString;
 };
+
 export const filtrarTipos = (data, tipo) => {
   const dataFiltrada = data.pokemon.filter((pokemon) =>
     pokemon.type.includes(tipo)
   );
-
   return { pokemon: dataFiltrada };
 };
 
@@ -52,14 +52,3 @@ export function abcOrder(data, order) {
     return {pokemon:inverso}
   }
 }
-export const orderByMxCP = (option, data) => {
-  switch (option) {
-  case "1":
-    data.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
-    break;
-  default:
-    data.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
-    data.reverse();
-  }
-  return {pokemon:data};
-};

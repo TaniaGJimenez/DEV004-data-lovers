@@ -147,14 +147,14 @@ hacerlo es creando _interfaces_ y _visualizaciones_.
 ## 5. Diseño de Interfaz de Usuario
   ### **Prototipo de baja fidelidad**
   <p align="center">
-  <img src="./src/PrototipoBaja.png" alt="Prototipo baja fidelidad" style="max-width:50%;">
+  <img src="./src/PrototipoBajaF.png" alt="Prototipo baja fidelidad" style="max-width:50%;">
 </p>
 <center>En el proceso de desarrollo del proyecto, cada miembro del equipo comenzó a trabajar en la creación de un prototipo de baja fidelidad de forma individual. Esto nos permitió explorar diferentes opciones de diseño y de flujo de usuario.
    Una vez que cada miembro del equipo completó su prototipo, los compartimos y trabajamos juntos en la unión de ambos. Al unir los prototipos, pudimos combinar nuestras ideas y elegir las mejores opciones de cada uno. De esta manera, creamos un prototipo que incorporó las mejores prácticas de diseño y de usabilidad. </center>  
 
   ### **Prototipo de alta fidelidad**
    <p align="center">
-  <img src="./src/PrototipoAlta.png" alt="Prototipo alta fidelidad" style="max-width:50%;">
+  <img src="./src/PrototipoAltaF.png" alt="Prototipo alta fidelidad" style="max-width:50%;">
 </p>
 Para crear el prototipo de alta fidelidad, nos basamos en el prototipo de baja fidelidad que habíamos desarrollado anteriormente. Utilizamos una herramienta de diseño para crear una versión más refinada del prototipo, en el que incluimos más detalles visuales y funcionales.
 Comenzamos por agregar más detalles a las diferentes secciones y elementos de la interfaz gráfica, tales como iconos, colores, imágenes, texturas y otros elementos visuales que mejoraran la experiencia de usuario. También ajustamos el tamaño y posición de los diferentes elementos para mejorar la accesibilidad y la legibilidad de la información.
