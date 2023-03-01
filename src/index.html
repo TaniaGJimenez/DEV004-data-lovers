@@ -13,7 +13,7 @@
       <img class="img-go" src="go.png" />
     </div>
     <div class="botones">
-      <div class="buscar">
+      <div class="buscar" id="input-buscar">
         <img class="input" src="b2 .png" alt="" />
         <input
           type="text"
@@ -22,12 +22,12 @@
           required
         />
       </div>
-      <div class="dropdown">
+      <div class="dropdown" id="dropdown-filtrar">
         <button class="dropbtn" id="btn-filter" data-target="dropdown-content-filtrar">FILTRAR POR TIPO</button>
         <div class="dropdown-content" id="dropdown-content-filtrar">
           <div class="menu-tipos">
             <li>
-              <a href="#" name="todos" class="tipoPokemon">Todos los tipos </a>
+              <a href="#" name="todos" class="tipoPokemon">Todos los tipos</a>
             </li>
             <li><a href="#" name="water" class="tipoPokemon">Agua</a></li>
             <li><a href="#" name="fire" class="tipoPokemon">Fuego</a></li>
@@ -50,30 +50,29 @@
           </div>
         </div>
       </div>
-
-      <div class="dropdown">
+      <div class="dropdown" id="dropdown-ordenar">
         <button class="dropbtn" id="btn-ordenar" data-target="dropdown-content-ordenar">ORDENAR POR NOMBRE</button>
         <div class="dropdown-content" id="dropdown-content-ordenar">
-          <a href="#" name="todos" class="Ordenar">Todos</a>
-          <a href="#" name="AZ" class="Ordenar"> A-Z </a>
-          <a href="#" name="ZA" class="Ordenar"> Z-A </a>
+          <a href="#" name="todos" class="Ordenar">Sin ordenar</a>
+          <a href="#" name="AZ" class="Ordenar"> Orden de A-Z </a>
+          <a href="#" name="ZA" class="Ordenar"> Orden de Z-A </a>
         </div>
       </div>
-      <div class="dropdown">
+      <!-- <div class="dropdown" id="dropdown-calcular">
         <button class="dropbtn" id="btn-calcular" data-target="dropdown-content-calcular">Top 10</button>
         <div class="dropdown-content" id="dropdown-content-calcular">
           <a href="#" value="1"> Max CP </a> 
           <a href="#" value="2"> Min CPl </a>
-        </div>
-      </div>
+        </div> 
+      </div>-->
+      <button id="toggle-table-btn" class="Stats">
+        ESTADISTICA DE TIPOS
+      </button>
     </div>
   </header>
   <body>
     <main>
       <div class="container">
-        <button id="toggle-table-btn" class="Stats">
-          ESTADISTICA DE TIPOS
-        </button>
         <table id="my-table" class="hidden">
           <thead>
             <tr>

@@ -52,14 +52,12 @@ for (const tipo of tipoPokemon) {
 }
 
 inputBuscar.addEventListener("input", function () {
- 
-  const FiltroNombre = buscarPorNombre(data, inputBuscar.value);
-  FiltroNombre.value.trim().substring(0, 3);
+  const FiltroNombre = buscarPorNombre(data, inputBuscar.value.trim().substring(0, 3));
   
-  if (FiltroNombre.length === 0) {
-
+  if (FiltroNombre.pokemon.length === 0) {
     alert("No se encontraron resultados");
   }
+  
   bloqueTarjetas.innerHTML = tarjetas(FiltroNombre);
 });
 // inputBuscar.addEventListener('input', () => {
