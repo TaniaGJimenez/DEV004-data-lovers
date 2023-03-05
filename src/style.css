@@ -1,25 +1,26 @@
 /*Encabezado con banner al fondo*/
-.header{
-  background-color:#230C2E ;
-  position:sticky; top:0;
-  padding-bottom:25px;
-  background:url(Im-go.jpg) center center no-repeat;
+.header {
+  background-color: #230c2e;
+  position: sticky;
+  top: 0;
+  padding-bottom: 25px;
+  background: url(Im-go.jpg) center center no-repeat;
   background-size: cover;
   justify-content: space-between;
   z-index: 1;
 }
 
-  /*Imagen de Pokemon Go al centro del Encabezado*/
-.img-go{
+/*Imagen de Pokemon Go al centro del Encabezado*/
+.img-go {
   max-width: 250px;
   display: block;
   margin: 0 auto;
 }
- 
-body{
+
+body {
   background: #f1ee3d;
   font-family: Consolas;
-}  
+}
 
 /*Da formato al container de las Tarjetas*/
 #bloqueTarjetas {
@@ -30,13 +31,12 @@ body{
   gap: 5%;
   z-index: 0;
 }
- 
+
 /*Tarjeta de Pokemon con bordes*/
 .tarjeta {
   border-width: 10px;
   padding: 10px;
-  border:6px   double
-  #230C2E;
+  border: 6px double #230c2e;
   margin: 30px 20px;
   border-radius: 20px;
   gap: 15px;
@@ -44,25 +44,25 @@ body{
   align-items: center;
   margin-bottom: 20px;
   height: 40vh;
-  background:url(fondo.jpg);
+  background: url(fondo.jpg);
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
 
 /*Imagen de Pokemon*/
 .imagenPokemon {
-  width:20vh;
+  width: 20vh;
   margin-top: 10px;
   margin-bottom: 10px;
   /* justify-content: center; */
 }
 
-/*Nombre y Num de Cada Pokemon*/  
-p{
+/*Nombre y Num de Cada Pokemon*/
+p {
   margin-bottom: 5px;
   text-align: center;
   font-size: 20px;
-  color: #230C2E;
+  color: #230c2e;
 }
 
 /*FlipCards*/
@@ -93,7 +93,7 @@ p{
   transform: perspective(500px) rotateY(180deg);
 }
 
-.front.tarjeta{
+.front.tarjeta {
   position: absolute;
 }
 
@@ -109,31 +109,33 @@ p{
   text-align: justify;
   padding: 10px;
   font-size: 12px;
-  color:black;
+  color: black;
 }
 
 /*Da formato a Botones*/
 .dropbtn {
-  background-color: #0075BE;
+  background-color: #0075be;
   color: white;
   padding: 15px;
   font-size: 12px;
   margin: 10px;
   cursor: pointer;
-  border-radius:10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  border:none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: none;
 }
-#toggle-table-btn{
-  background-color: #0075BE;
+#toggle-table-btn {
+  background-color: #0075be;
   color: white;
   padding: 15px;
   font-size: 12px;
   margin: 10px;
   cursor: pointer;
-  border-radius:10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  border:none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: none;
 }
 
 /*Posición del Menú Desplegable */
@@ -147,23 +149,23 @@ p{
   display: none;
   position: absolute;
   background-color: #f5f10c;
-  min-width: 160px;    
+  min-width: 160px;
 }
 
 /*Estilo adentro del Menú Desplegable*/
 .dropdown-content a {
-  margin:5px;
-  padding:3px;
+  margin: 5px;
+  padding: 3px;
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
-  flex-direction:row;
+  flex-direction: row;
 }
 
 /* Estilo de los links en hover */
 .dropdown-content a:hover {
-  background-color:#FFCC00;
-  color:black;
+  background-color: #ffcc00;
+  color: black;
 }
 
 /*Menu desplegable estilo*/
@@ -178,17 +180,17 @@ p{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #FFCC00;
-    color:black;
+  background-color: #ffcc00;
+  color: black;
 }
 
 /*Elimina las viñetas de la li*/
-.menu-tipos{
-  list-style:none;
+.menu-tipos {
+  list-style: none;
 }
 
 a:visited {
-  color:white ;
+  color: white;
 }
 
 a:focus-within {
@@ -196,7 +198,7 @@ a:focus-within {
   font-weight: bold;
 }
 
-/*Da formato al container de los Botones*/ 
+/*Da formato al container de los Botones*/
 .botones {
   display: flex;
   align-items: center;
@@ -206,61 +208,66 @@ a:focus-within {
 }
 
 /*Da formato a Input*/
-.buscar input[type="text"]{
+.buscar input[type="text"] {
   width: 100%;
-  display:flex;
+  display: flex;
   font-size: 15px;
   padding: 7px;
   border-radius: 10px;
   text-align: right;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  border:none;
- 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: none;
 }
 
-/*Da formato al container de Input*/ 
-.buscar{
-  display:flex;
+/*Da formato al container de Input*/
+.buscar {
+  display: flex;
 }
 
 /*Da formato al container de la Tabla*/
-.container{
+.container {
   align-content: center;
   margin: 15px;
 }
 
 #my-table {
   width: 50%;
-  border-style:double;
+  border-style: double;
   border-color: #203079;
-  background:url(fondo.jpg);
+  background: url(fondo.jpg);
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-th, td {
+th,
+td {
   padding: 3px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
 th {
-  background-color: #0075BE;
+  background-color: #0075be;
   color: white;
 }
 
 .hidden {
   display: none;
 }
- 
-.my-chart{
+
+.my-chart {
   display: none;
-  width:50% ;
-  height:40%;
+  width: 50%;
+  height: 40%;
 }
 
 /* para despositivos moviles  */
-@media (max-width: 800px){
+@media (max-width: 800px) {
   #bloqueTarjetas {
     gap: 20%;
   }
@@ -268,12 +275,12 @@ th {
     width: 50%;
   }
   .dropbtn #toggle-table-btn {
-    background-color: #0075BE;
+    background-color: #0075be;
     color: white;
     padding: 16px;
-    font-size: 10%
+    font-size: 10%;
   }
-  .buscar input{
+  .buscar input {
     width: 70vw;
     display: flex;
     font-size: 5%;
@@ -282,7 +289,7 @@ th {
     justify-content: flex-end;
     position: relative;
   }
-  .botones  {
+  .botones {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -290,7 +297,7 @@ th {
     flex-wrap: wrap;
     font-size: 70%;
     width: 100%;
-    z-index:2;
+    z-index: 2;
   }
   .dropdown {
     position: relative;
@@ -301,14 +308,14 @@ th {
     position: absolute;
     background-color: #1fd31f;
     min-width: 160px;
-    z-index:1;
+    z-index: 1;
   }
   .about {
     max-width: 100%;
     text-align: center;
     padding: 10px;
     font-size: 25px;
-    color:black;
+    color: black;
   }
   .img-go {
     width: 100%;
